@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reformas Modificaciones | Reformas y refacciones en [ZONA]</title>
+<meta name="description" content="Reformas de baños, cocinas, pintura, albañilería y más en [ZONA]. Presupuesto sin cargo y respuesta en el día. Escribinos por WhatsApp.">
+
+<!--
+  ============================================================
+  ANTES DE PUBLICAR: buscá y reemplazá estos datos (Ctrl+F)
+  ------------------------------------------------------------
+  [ZONA]            -> ciudad o zona de trabajo (ej: Zona Sur, Lomas de Zamora)
+  [X]               -> números reales (obras, años de experiencia)
+  5491100000000     -> número de WhatsApp con código de país (54 9 + área + número, sin espacios ni signos)
+  [TELEFONO]        -> teléfono visible
+  [EMAIL]           -> correo
+  [HORARIOS]        -> días y horarios de atención
+  [LOCALIDADES]     -> lista de localidades donde trabajan
+  Instagram         -> link real en el pie de página
+  Fotos             -> reemplazá los bloques de color por <img src="foto.jpg"> (ver comentarios)
+  Opiniones         -> pegá opiniones REALES de clientes (hoy hay textos de ejemplo marcados)
+  ============================================================
+-->
+
+<style>
+  :root{
+    --azul:#1F3A5F;
+    --azul-oscuro:#152944;
+    --naranja:#F28C28;
+    --naranja-hover:#d97a1b;
+    --verde:#25D366;
+    --verde-hover:#1ebe5a;
+    --gris:#F4F6F9;
+    --texto:#222B38;
+    --suave:#5B6676;
+    --borde:#E1E6ED;
+    --radio:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:76px}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--texto);background:#fff;line-height:1.55;-webkit-text-size-adjust:100%}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  section{padding:64px 0}
+  h1,h2,h3{line-height:1.2;color:var(--azul)}
+  h2{font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:10px}
+  .sub{color:var(--suave);max-width:640px;margin-bottom:34px}
+  .centro{text-align:center}
+  .centro .sub{margin-left:auto;margin-right:auto}
+
+  /* Botones */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:700;font-size:1rem;border:2px solid transparent;cursor:pointer;transition:.2s;min-height:48px;font-family:inherit}
+  .btn-naranja{background:var(--naranja);color:#fff}
+  .btn-naranja:hover{background:var(--naranja-hover)}
+  .btn-verde{background:var(--verde);color:#fff}
+  .btn-verde:hover{background:var(--verde-hover)}
+  .btn-borde{border-color:#fff;color:#fff}
+  .btn-borde:hover{background:#fff;color:var(--azul)}
+  .btn-azul-borde{border-color:var(--azul);color:var(--azul)}
+  .btn-azul-borde:hover{background:var(--azul);color:#fff}
+
+  /* Barra superior */
+  header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--borde)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--azul);font-size:1.1rem;line-height:1.1}
+  .logo-icono{width:38px;height:38px;border-radius:10px;background:var(--azul);color:var(--naranja);display:grid;place-items:center;font-size:1.3rem}
+  .logo small{display:block;font-weight:600;color:var(--suave);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase}
+  nav ul{display:flex;gap:26px;list-style:none;align-items:center}
+  nav a.link{font-weight:600;color:var(--texto);font-size:.95rem}
+  nav a.link:hover{color:var(--naranja)}
+  .nav .btn{padding:10px 20px;min-height:42px;font-size:.92rem}
+  .hamb{display:none;background:none;border:0;font-size:1.8rem;color:var(--azul);cursor:pointer;padding:6px}
+  @media(max-width:860px){
+    .hamb{display:block}
+    nav{position:absolute;top:68px;left:0;right:0;background:#fff;border-bottom:1px solid var(--borde);display:none;padding:10px 20px 20px}
+    nav.abierto{display:block}
+    nav ul{flex-direction:column;align-items:stretch;gap:0}
+    nav a.link{display:block;padding:14px 4px;border-bottom:1px solid var(--borde)}
+    nav li:last-child{margin-top:14px}
+    nav li:last-child .btn{width:100%}
+    .nav>.btn-desktop{display:none}
+  }
+
+  /* Portada */
+  .hero{position:relative;color:#fff;padding:90px 0 70px;background:
+      linear-gradient(120deg,rgba(21,41,68,.93),rgba(31,58,95,.82)),
+      repeating-linear-gradient(45deg,#2b4d7a 0 24px,#27476f 24px 48px);
+    /* Para usar una foto real: background: linear-gradient(rgba(21,41,68,.8),rgba(21,41,68,.8)), url('portada.jpg') center/cover; */
+  }
+  .hero h1{color:#fff;font-size:clamp(2rem,6vw,3.3rem);max-width:760px;margin-bottom:16px}
+  .hero p{font-size:1.15rem;max-width:620px;opacity:.95;margin-bottom:28px}
+  .hero-botones{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:38px}
+  .marcas{display:flex;gap:12px 28px;flex-wrap:wrap;font-weight:600;font-size:.95rem}
+  .marcas span::before{content:"✓";color:var(--naranja);font-weight:800;margin-right:8px}
+
+  /* Franja de números */
+  .franja{background:var(--naranja);color:#fff;padding:26px 0}
+  .franja .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;text-align:center}
+  .franja strong{display:block;font-size:1.7rem;line-height:1.1}
+  .franja span{font-size:.9rem;font-weight:600}
+  @media(max-width:700px){.franja .grid{grid-template-columns:repeat(2,1fr)}}
+
+  /* Servicios */
+  .servicios-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}
+  .card{background:#fff;border:1px solid var(--borde);border-radius:var(--radio);padding:26px 22px;transition:.2s}
+  .card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(31,58,95,.12);border-color:var(--naranja)}
+  .icono{width:52px;height:52px;border-radius:14px;background:var(--gris);display:grid;place-items:center;font-size:1.6rem;margin-bottom:14px}
+  .card h3{font-size:1.1rem;margin-bottom:6px}
+  .card p{color:var(--suave);font-size:.95rem;margin-bottom:12px}
+  .card a{color:var(--naranja);font-weight:700;font-size:.95rem}
+
+  /* Antes y después */
+  .gris{background:var(--gris)}
+  .ba-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:24px}
+  .ba-item{background:#fff;border-radius:var(--radio);overflow:hidden;border:1px solid var(--borde)}
+  .ba{position:relative;aspect-ratio:4/3;--pos:50%;user-select:none;overflow:hidden}
+  .ba .capa{position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-weight:700;text-align:center;padding:12px}
+  /* Reemplazá cada .capa por <img src="antes.jpg" class="capa"> y <img src="despues.jpg" class="capa"> */
+  .ba .despues{background:linear-gradient(135deg,#3f7d5b,#2c5a41)}
+  .ba .antes{background:linear-gradient(135deg,#8a8f98,#5f646c);clip-path:inset(0 calc(100% - var(--pos)) 0 0)}
+  .ba .tag{position:absolute;top:10px;padding:4px 12px;border-radius:999px;background:rgba(0,0,0,.55);color:#fff;font-size:.78rem;font-weight:700;z-index:3}
+  .ba .tag.a{left:10px}.ba .tag.d{right:10px}
+  .ba .linea{position:absolute;top:0;bottom:0;left:var(--pos);width:3px;background:#fff;z-index:2;transform:translateX(-50%)}
+  .ba .linea::after{content:"↔";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:38px;height:38px;border-radius:50%;background:#fff;color:var(--azul);display:grid;place-items:center;font-weight:800;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+  .ba input[type=range]{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:4;margin:0}
+  .ba-info{padding:14px 18px}
+  .ba-info strong{display:block;color:var(--azul)}
+  .ba-info span{color:var(--suave);font-size:.9rem}
+  .cta-centro{text-align:center;margin-top:34px}
+
+  /* Por qué elegirnos */
+  .por-que{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+  .por-que div{text-align:center;padding:10px}
+  .por-que .icono{margin:0 auto 14px;background:var(--azul);color:#fff}
+  .por-que h3{font-size:1.05rem;margin-bottom:6px}
+  .por-que p{color:var(--suave);font-size:.95rem}
+
+  /* Pasos */
+  .pasos{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;position:relative;counter-reset:p}
+  .paso{text-align:center;position:relative;padding:0 6px}
+  .paso .num{width:56px;height:56px;border-radius:50%;background:var(--naranja);color:#fff;font-weight:800;font-size:1.4rem;display:grid;place-items:center;margin:0 auto 14px;position:relative;z-index:2}
+  .paso:not(:last-child)::after{content:"";position:absolute;top:28px;left:calc(50% + 34px);right:calc(-50% + 34px);height:3px;background:repeating-linear-gradient(90deg,var(--naranja) 0 8px,transparent 8px 14px)}
+  .paso h3{font-size:1.02rem;margin-bottom:4px}
+  .paso p{color:var(--suave);font-size:.93rem}
+  @media(max-width:800px){
+    .pasos{grid-template-columns:1fr;gap:26px}
+    .paso:not(:last-child)::after{display:none}
+  }
+
+  /* Opiniones */
+  .opiniones{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:14px;-webkit-overflow-scrolling:touch}
+  .op{flex:0 0 min(340px,86%);scroll-snap-align:start;background:#fff;border:1px solid var(--borde);border-radius:var(--radio);padding:24px}
+  .estrellas{color:var(--naranja);letter-spacing:3px;font-size:1.1rem;margin-bottom:10px}
+  .op p{font-size:.97rem;margin-bottom:14px}
+  .op footer{display:flex;align-items:center;gap:10px;font-size:.9rem;color:var(--suave)}
+  .avatar{width:38px;height:38px;border-radius:50%;background:var(--azul);color:#fff;display:grid;place-items:center;font-weight:700}
+  .aviso{background:#fff7ec;border:1px dashed var(--naranja);color:#8a5410;border-radius:10px;padding:10px 14px;font-size:.85rem;margin-bottom:18px}
+
+  /* Zona */
+  .zona{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+  .mapa{aspect-ratio:4/3;border-radius:var(--radio);overflow:hidden;border:1px solid var(--borde);background:var(--gris);display:grid;place-items:center;text-align:center;color:var(--suave);padding:20px}
+  .mapa iframe{width:100%;height:100%;border:0}
+  .localidades{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+  .localidades span{background:var(--gris);border:1px solid var(--borde);padding:7px 14px;border-radius:999px;font-size:.92rem;font-weight:600;color:var(--azul)}
+  @media(max-width:800px){.zona{grid-template-columns:1fr}}
+
+  /* Preguntas */
+  .faq{max-width:780px;margin:0 auto}
+  details{background:#fff;border:1px solid var(--borde);border-radius:12px;margin-bottom:12px;padding:0 20px}
+  summary{cursor:pointer;font-weight:700;color:var(--azul);padding:18px 0;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-size:1.5rem;color:var(--naranja);font-weight:700}
+  details[open] summary::after{content:"–"}
+  details p{color:var(--suave);padding-bottom:18px}
+
+  /* Formulario */
+  .presupuesto{background:var(--azul);color:#fff}
+  .presupuesto h2{color:#fff}
+  .presupuesto .sub{color:#c9d5e6}
+  .form-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:34px;align-items:start}
+  form{background:#fff;color:var(--texto);border-radius:var(--radio);padding:26px}
+  .campo{margin-bottom:14px}
+  label{display:block;font-weight:700;font-size:.9rem;margin-bottom:5px;color:var(--azul)}
+  input[type=text],input[type=tel],select,textarea{width:100%;padding:13px 14px;border:1.5px solid var(--borde);border-radius:10px;font:inherit;background:#fff;color:var(--texto)}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--naranja)}
+  textarea{min-height:100px;resize:vertical}
+  .fila{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  form .btn{width:100%}
+  .nota{font-size:.82rem;color:var(--suave);margin-top:10px;text-align:center}
+  .lado{background:rgba(255,255,255,.08);border-radius:var(--radio);padding:26px}
+  .lado h3{color:#fff;margin-bottom:8px}
+  .lado p{color:#c9d5e6;margin-bottom:18px}
+  .lado .btn{width:100%}
+  @media(max-width:800px){.form-grid{grid-template-columns:1fr}.fila{grid-template-columns:1fr}}
+
+  /* Pie */
+  footer.pie{background:var(--azul-oscuro);color:#c9d5e6;padding:48px 0 90px;font-size:.95rem}
+  .pie-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px;margin-bottom:30px}
+  .pie .logo{color:#fff;margin-bottom:12px}
+  .pie h4{color:#fff;margin-bottom:10px}
+  .pie li{list-style:none;margin-bottom:6px}
+  .pie a:hover{color:var(--naranja)}
+  .copy{border-top:1px solid rgba(255,255,255,.12);padding-top:18px;font-size:.85rem;text-align:center}
+  @media(max-width:800px){.pie-grid{grid-template-columns:1fr}}
+
+  /* WhatsApp flotante */
+  .wa-flotante{position:fixed;right:16px;bottom:16px;z-index:60;background:var(--verde);color:#fff;font-weight:700;padding:14px 20px;border-radius:999px;box-shadow:0 8px 22px rgba(0,0,0,.28);display:flex;align-items:center;gap:8px;transition:.2s}
+  .wa-flotante:hover{background:var(--verde-hover);transform:translateY(-2px)}
+  .wa-flotante svg{width:24px;height:24px;fill:#fff;flex:none}
+  @media(max-width:480px){.wa-flotante span{display:none}.wa-flotante{padding:15px}}
+</style>
+</head>
+<body>
+
+<!-- 1. BARRA SUPERIOR -->
+<header>
+  <div class="wrap nav">
+    <a href="#inicio" class="logo" aria-label="Reformas Modificaciones">
+      <span class="logo-icono">🔨</span>
+      <span>Reformas<small>Modificaciones</small></span>
+    </a>
+    <nav id="menu" aria-label="Principal">
+      <ul>
+        <li><a class="link" href="#servicios">Servicios</a></li>
+        <li><a class="link" href="#trabajos">Trabajos</a></li>
+        <li><a class="link" href="#como-trabajamos">Cómo trabajamos</a></li>
+        <li><a class="link" href="#opiniones">Opiniones</a></li>
+        <li><a class="link" href="#contacto">Contacto</a></li>
+        <li><a class="btn btn-naranja" href="#contacto">Pedir presupuesto</a></li>
+      </ul>
+    </nav>
+    <button class="hamb" id="hamb" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main>
+<!-- 2. PORTADA -->
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <h1>Reformamos tu casa con calidad, cumplimiento y precio claro</h1>
+    <p>Baños, cocinas, pintura, albañilería y más en [ZONA]. Presupuesto sin cargo y respuesta en el día.</p>
+    <div class="hero-botones">
+      <a class="btn btn-naranja" href="https://wa.me/5491100000000?text=Hola!%20Quiero%20pedir%20un%20presupuesto%20de%20reforma." target="_blank" rel="noopener">Pedir presupuesto por WhatsApp</a>
+      <a class="btn btn-borde" href="#trabajos">Ver trabajos realizados</a>
+    </div>
+    <div class="marcas">
+      <span>Presupuesto sin cargo</span>
+      <span>Garantía en los trabajos</span>
+      <span>Más de [X] años de experiencia</span>
+    </div>
+  </div>
+</section>
+
+<!-- 3. FRANJA DE CONFIANZA -->
+<div class="franja">
+  <div class="wrap grid">
+    <div><strong>[X]+</strong><span>obras realizadas</span></div>
+    <div><strong>[X]</strong><span>años de experiencia</span></div>
+    <div><strong>100%</strong><span>presupuesto sin cargo</span></div>
+    <div><strong>Garantía</strong><span>por escrito</span></div>
+  </div>
+</div>
+
+<!-- 4. SERVICIOS -->
+<section id="servicios">
+  <div class="wrap">
+    <div class="centro">
+      <h2>¿Qué reformas hacemos?</h2>
+      <p class="sub">Desde un arreglo puntual hasta una remodelación completa. Contanos qué necesitás y lo resolvemos.</p>
+    </div>
+    <div class="servicios-grid">
+      <div class="card"><div class="icono">🚿</div><h3>Reforma de baños</h3><p>Renovación completa: revestimientos, sanitarios, grifería y plomería.</p><a href="#contacto">Consultar →</a></div>
+      <div class="card"><div class="icono">🍳</div><h3>Reforma de cocinas</h3><p>Muebles, mesadas, instalaciones y revestimientos a medida.</p><a href="#contacto">Consultar →</a></div>
+      <div class="card"><div class="icono">🧱</div><h3>Albañilería y ampliaciones</h3><p>Paredes, losas, ampliaciones, arreglos de humedad y estructura.</p><a href="#contacto">Consultar →</a></div>
+      <div class="card"><div class="icono">🎨</div><h3>Pintura interior y exterior</h3><p>Preparación de superficies y terminación prolija.</p><a href="#contacto">Consultar →</a></div>
+      <div class="card"><div class="icono">🔲</div><h3>Revestimientos y pisos</h3><p>Cerámicos, porcelanatos, pisos y zócalos bien colocados.</p><a href="#contacto">Consultar →</a></div>
+      <div class="card"><div class="icono">⚡</div><h3>Instalaciones eléctricas y de gas</h3><p>Instalaciones y reparaciones con materiales de calidad.</p><a href="#contacto">Consultar →</a></div>
+      <div class="card"><div class="icono">🏠</div><h3>Durlock y cielorrasos</h3><p>Tabiques, cielorrasos y detalles de terminación.</p><a href="#contacto">Consultar →</a></div>
+      <div class="card"><div class="icono">🏪</div><h3>Reformas de locales comerciales</h3><p>Adecuamos tu local para que puedas abrir cuanto antes.</p><a href="#contacto">Consultar →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. ANTES Y DESPUÉS -->
+<section id="trabajos" class="gris">
+  <div class="wrap">
+    <div class="centro">
+      <h2>Mirá cómo quedan nuestros trabajos</h2>
+      <p class="sub">Deslizá cada foto para comparar el antes y el después.</p>
+    </div>
+    <div class="ba-grid">
+      <!-- Repetí este bloque por cada trabajo. Cambiá las dos .capa por tus fotos: <img class="capa antes" src="baño-antes.jpg" alt="Baño antes de la reforma"> -->
+      <div class="ba-item">
+        <div class="ba">
+          <div class="capa despues">FOTO DESPUÉS<br>(reemplazar)</div>
+          <div class="capa antes">FOTO ANTES<br>(reemplazar)</div>
+          <span class="tag a">Antes</span><span class="tag d">Después</span>
+          <div class="linea"></div>
+          <input type="range" min="0" max="100" value="50" aria-label="Comparar antes y después">
+        </div>
+        <div class="ba-info"><strong>Reforma de baño</strong><span>[Barrio / localidad]</span></div>
+      </div>
+      <div class="ba-item">
+        <div class="ba">
+          <div class="capa despues">FOTO DESPUÉS<br>(reemplazar)</div>
+          <div class="capa antes">FOTO ANTES<br>(reemplazar)</div>
+          <span class="tag a">Antes</span><span class="tag d">Después</span>
+          <div class="linea"></div>
+          <input type="range" min="0" max="100" value="50" aria-label="Comparar antes y después">
+        </div>
+        <div class="ba-info"><strong>Reforma de cocina</strong><span>[Barrio / localidad]</span></div>
+      </div>
+      <div class="ba-item">
+        <div class="ba">
+          <div class="capa despues">FOTO DESPUÉS<br>(reemplazar)</div>
+          <div class="capa antes">FOTO ANTES<br>(reemplazar)</div>
+          <span class="tag a">Antes</span><span class="tag d">Después</span>
+          <div class="linea"></div>
+          <input type="range" min="0" max="100" value="50" aria-label="Comparar antes y después">
+        </div>
+        <div class="ba-info"><strong>Pintura y revestimientos</strong><span>[Barrio / localidad]</span></div>
+      </div>
+    </div>
+    <div class="cta-centro"><a class="btn btn-naranja" href="#contacto">Quiero algo así para mi casa</a></div>
+  </div>
+</section>
+
+<!-- 6. POR QUÉ ELEGIRNOS -->
+<section>
+  <div class="wrap">
+    <div class="centro"><h2>Por qué elegir Reformas Modificaciones</h2></div>
+    <div class="por-que" style="margin-top:34px">
+      <div><div class="icono">📝</div><h3>Presupuesto claro y por escrito</h3><p>Sabés cuánto vas a pagar antes de empezar. Sin sorpresas.</p></div>
+      <div><div class="icono">⏱️</div><h3>Cumplimos los plazos</h3><p>Acordamos fechas y las respetamos.</p></div>
+      <div><div class="icono">✨</div><h3>Trabajo prolijo y obra limpia</h3><p>Cuidamos tu casa y dejamos todo ordenado.</p></div>
+      <div><div class="icono">🛡️</div><h3>Garantía y atención posterior</h3><p>Seguimos a tu disposición después de terminar.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. CÓMO TRABAJAMOS -->
+<section id="como-trabajamos" class="gris">
+  <div class="wrap">
+    <div class="centro"><h2>Así de simple</h2><p class="sub">Cuatro pasos de la primera consulta a la obra terminada.</p></div>
+    <div class="pasos">
+      <div class="paso"><div class="num">1</div><h3>Nos escribís</h3><p>Contanos qué necesitás, con fotos si podés.</p></div>
+      <div class="paso"><div class="num">2</div><h3>Visitamos y medimos</h3><p>Vamos a ver el lugar, sin cargo.</p></div>
+      <div class="paso"><div class="num">3</div><h3>Presupuesto detallado</h3><p>Te pasamos el costo claro, por escrito.</p></div>
+      <div class="paso"><div class="num">4</div><h3>Obra terminada</h3><p>Hacemos el trabajo y te lo entregamos listo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. OPINIONES -->
+<section id="opiniones">
+  <div class="wrap">
+    <div class="centro"><h2>Lo que dicen nuestros clientes</h2></div>
+    <div class="aviso">⚠️ Textos de ejemplo: reemplazalos por opiniones reales de tus clientes (podés copiarlas de Facebook) y borrá este aviso.</div>
+    <div class="opiniones">
+      <div class="op"><div class="estrellas">★★★★★</div><p>[Pegá acá una opinión real de un cliente sobre el trabajo, el trato y el cumplimiento.]</p><footer><div class="avatar">N</div><div>[Nombre], [barrio]</div></footer></div>
+      <div class="op"><div class="estrellas">★★★★★</div><p>[Pegá acá otra opinión real de un cliente.]</p><footer><div class="avatar">N</div><div>[Nombre], [barrio]</div></footer></div>
+      <div class="op"><div class="estrellas">★★★★★</div><p>[Pegá acá una tercera opinión real de un cliente.]</p><footer><div class="avatar">N</div><div>[Nombre], [barrio]</div></footer></div>
+    </div>
+    <div class="cta-centro"><a class="btn btn-azul-borde" href="https://www.facebook.com/reformasgustavoplaza" target="_blank" rel="noopener">Ver más opiniones en Facebook</a></div>
+  </div>
+</section>
+
+<!-- 9. ZONA DE TRABAJO -->
+<section class="gris">
+  <div class="wrap zona">
+    <div>
+      <h2>Dónde trabajamos</h2>
+      <p class="sub" style="margin-bottom:0">Cubrimos [ZONA] y alrededores.</p>
+      <div class="localidades">
+        <span>[Localidad 1]</span><span>[Localidad 2]</span><span>[Localidad 3]</span><span>[Localidad 4]</span><span>[Localidad 5]</span>
+      </div>
+      <p><strong>¿No ves tu zona? Consultanos igual.</strong></p>
+    </div>
+    <!-- Para un mapa real: Google Maps → Compartir → Insertar un mapa → pegá el <iframe> acá, reemplazando el texto. -->
+    <div class="mapa">📍 Acá va el mapa de la zona de trabajo</div>
+  </div>
+</section>
+
+<!-- 10. PREGUNTAS FRECUENTES -->
+<section>
+  <div class="wrap">
+    <div class="centro"><h2>Preguntas frecuentes</h2></div>
+    <div class="faq" style="margin-top:30px">
+      <details><summary>¿El presupuesto tiene costo?</summary><p>No. Visitamos, medimos y te pasamos el presupuesto sin cargo y sin compromiso.</p></details>
+      <details><summary>¿Cuánto tarda una reforma?</summary><p>Depende del trabajo. En el presupuesto te indicamos el plazo estimado y lo acordamos antes de empezar.</p></details>
+      <details><summary>¿Trabajan con materiales propios o los pone el cliente?</summary><p>Podemos encargarnos de los materiales o trabajar con los que vos elijas. [Completar según cómo trabajen]</p></details>
+      <details><summary>¿Qué formas de pago aceptan?</summary><p>[Completar: efectivo, transferencia, pago por etapas, etc.]</p></details>
+      <details><summary>¿Dan garantía por los trabajos?</summary><p>Sí, damos garantía sobre los trabajos realizados. [Completar plazo y condiciones]</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 11. FORMULARIO DE PRESUPUESTO -->
+<section id="contacto" class="presupuesto">
+  <div class="wrap">
+    <div class="centro"><h2>Pedí tu presupuesto sin compromiso</h2><p class="sub">Completá los datos y te respondemos por WhatsApp.</p></div>
+    <div class="form-grid">
+      <form id="form">
+        <div class="fila">
+          <div class="campo"><label for="nombre">Nombre</label><input type="text" id="nombre" required autocomplete="name"></div>
+          <div class="campo"><label for="tel">Teléfono</label><input type="tel" id="tel" required autocomplete="tel"></div>
+        </div>
+        <div class="fila">
+          <div class="campo"><label for="tipo">Tipo de reforma</label>
+            <select id="tipo" required>
+              <option value="">Elegí una opción</option>
+              <option>Reforma de baño</option>
+              <option>Reforma de cocina</option>
+              <option>Albañilería / ampliación</option>
+              <option>Pintura</option>
+              <option>Revestimientos y pisos</option>
+              <option>Instalación eléctrica / gas</option>
+              <option>Durlock y cielorrasos</option>
+              <option>Local comercial</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="campo"><label for="zona">Barrio o localidad</label><input type="text" id="zona" required></div>
+        </div>
+        <div class="campo"><label for="msg">Contanos qué necesitás</label><textarea id="msg"></textarea></div>
+        <button class="btn btn-naranja" type="submit">Enviar consulta</button>
+        <p class="nota">Se abrirá WhatsApp con tu consulta lista para enviar. Si querés mostrarnos fotos, mandalas por ahí.</p>
+      </form>
+      <div class="lado">
+        <h3>¿Preferís escribirnos directo?</h3>
+        <p>Respondemos en el día. Mandanos fotos del lugar y te orientamos enseguida.</p>
+        <a class="btn btn-verde" href="https://wa.me/5491100000000?text=Hola!%20Quiero%20pedir%20un%20presupuesto." target="_blank" rel="noopener">Escribinos por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- 12. PIE DE PÁGINA -->
+<footer class="pie">
+  <div class="wrap">
+    <div class="pie-grid">
+      <div>
+        <div class="logo"><span class="logo-icono">🔨</span><span>Reformas<small style="color:#9fb0c8">Modificaciones</small></span></div>
+        <p>Reformas y refacciones de viviendas y locales en [ZONA]. Calidad, cumplimiento y precio claro.</p>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li>📞 [TELEFONO]</li>
+          <li>💬 <a href="https://wa.me/5491100000000" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li>✉️ [EMAIL]</li>
+          <li>🕐 [HORARIOS]</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Seguinos</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/reformasgustavoplaza" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">© <span id="anio">2026</span> Reformas Modificaciones. Todos los derechos reservados.</div>
+  </div>
+</footer>
+
+<!-- Botón flotante de WhatsApp -->
+<a class="wa-flotante" href="https://wa.me/5491100000000?text=Hola!%20Quiero%20pedir%20un%20presupuesto." target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
+  <span>Pedí tu presupuesto</span>
+</a>
+
+<script>
+  // Menú en celular
+  var hamb = document.getElementById('hamb'), menu = document.getElementById('menu');
+  hamb.addEventListener('click', function(){
+    var abierto = menu.classList.toggle('abierto');
+    hamb.setAttribute('aria-expanded', abierto);
+    hamb.textContent = abierto ? '✕' : '☰';
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ menu.classList.remove('abierto'); hamb.textContent='☰'; });
+  });
+
+  // Antes / después
+  document.querySelectorAll('.ba').forEach(function(ba){
+    var r = ba.querySelector('input');
+    r.addEventListener('input', function(){ ba.style.setProperty('--pos', r.value + '%'); });
+  });
+
+  // Formulario -> WhatsApp (cambiá el número acá también)
+  var NUMERO_WHATSAPP = '5491100000000';
+  document.getElementById('form').addEventListener('submit', function(e){
+    e.preventDefault();
+    var f = function(id){ return document.getElementById(id).value.trim(); };
+    var texto = 'Hola! Quiero pedir un presupuesto.\n' +
+      'Nombre: ' + f('nombre') + '\n' +
+      'Teléfono: ' + f('tel') + '\n' +
+      'Reforma: ' + f('tipo') + '\n' +
+      'Zona: ' + f('zona') + '\n' +
+      (f('msg') ? 'Detalle: ' + f('msg') : '');
+    window.open('https://wa.me/' + NUMERO_WHATSAPP + '?text=' + encodeURIComponent(texto), '_blank');
+  });
+
+  document.getElementById('anio').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
